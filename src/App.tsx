@@ -1,4 +1,5 @@
 import { ChangeEvent, useEffect, useState } from "react";
+import { Clock } from "./components/Clock";
 
 function App() {
   const [clock, setClock] = useState(0);
@@ -56,8 +57,8 @@ function App() {
           name="startAt"
         />
       </div>
-      <div className="py-16">
-        <h2 className="text-6xl text-center">{clock.toFixed(2)}</h2>
+      <div className="py-16 flex flex-col items-center">
+        <Clock time={clock} />
 
         <div className="flex gap-4 my-8">
           <button
